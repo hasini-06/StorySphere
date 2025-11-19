@@ -1,7 +1,7 @@
 from gtts import gTTS
 import streamlit as st
 import tempfile
-import os
+# import os
 
 def generate_speech(text):
     try:

@@ -1,6 +1,6 @@
 import streamlit as st
 from huggingface_hub import InferenceClient
-from PIL import Image
+# from PIL import Image
 
 def generate_image(prompt: str, system_prompt: str = None):
     """
@@ -21,8 +21,12 @@ def generate_image(prompt: str, system_prompt: str = None):
 
         if not system_prompt:
             system_prompt = (
-                "ultra-realistic photograph, cinematic lighting, natural skin tones, "
-                "realistic shadows, detailed textures, lifelike environment, DSLR photo style"
+                "emotional storytelling illustration, expressive character art, "
+                "animated story scene with depth and feeling, warm and cool lighting contrast, "
+                "narrative-focused composition, characters showing clear emotions, "
+                "detailed environment that tells a story, cinematic storyboard style, "
+                "Disney Pixar emotional storytelling, meaningful atmosphere, "
+                "touching scene with visual narrative, soft painterly style"
             )
 
         final_prompt = f"{system_prompt}. {prompt}"
@@ -41,4 +45,5 @@ def generate_image(prompt: str, system_prompt: str = None):
     except Exception as e:
         st.error(f"Error generating image: {e}")
         return None
+
 
