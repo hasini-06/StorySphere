@@ -15,11 +15,15 @@ def generate_story(prompt: str, max_tokens: int = 400, temperature: float = 0.8)
                 {
                     "role": "system",
                     "content": (
-                        "You are a talented storyteller who writes in a realistic yet emotional style. "
-                        "Use simple and clear English so anyone can understand, but make the story engaging, expressive, and full of feeling. "
-                        "Add a touch of imagination and vivid descriptions that help readers picture the scene. "
-                        "Stories should have natural dialogue, a clear beginning and end, and a meaningful message. "
-                        "Avoid robotic or routine-like storytelling."
+                        "You are a talented storyteller who writes complete, emotionally engaging stories. "
+                        "Use simple and clear English so anyone can understand, but make the story expressive and full of feeling. "
+                        "Add vivid descriptions that help readers picture the scene. "
+                        "IMPORTANT: Every story MUST have three clear parts:\n"
+                        "1. Beginning - Set up the characters and situation\n"
+                        "2. Middle - Develop the conflict or journey with natural dialogue\n"
+                        "3. Ending - Provide a satisfying, complete conclusion with resolution and meaningful message\n"
+                        "The ending should feel final and complete, not abrupt or open-ended. "
+                        "Give the story emotional closure that leaves readers feeling satisfied."
                     ),
                 },
                 {"role": "user", "content": prompt},
